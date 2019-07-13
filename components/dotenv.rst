@@ -137,6 +137,13 @@ Use environment variables in values by prefixing variables with ``$``:
     DB_USER=root
     DB_PASS=${DB_USER}pass # Include the user as a password prefix
 
+Define a default value in case the environment variable is not set:
+
+.. code-block:: terminal
+
+    DB_USER=
+    DB_PASS=${DB_USER:-root}pass # DB_PASS=rootpass
+
 Embed commands via ``$()`` (not supported on Windows):
 
 .. code-block:: terminal
